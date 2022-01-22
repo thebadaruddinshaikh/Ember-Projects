@@ -1,0 +1,33 @@
+.app-name {
+  margin: 30px 20px;
+}
+.center-text {
+  text-align: center;
+}
+
+.pattern-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-container {
+  align-items: center;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.alert {
+  padding: 5px 20px;
+}
+.button-helper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.teacher-inputs {
+  margin: 15px 20px;
+}

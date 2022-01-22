@@ -1,0 +1,18 @@
+{{page-title 'Questions'}}
+<h4 class='center-text'>Student's Page</h4>
+<div class='quest-container'>
+  {{#each @model as |quest|}}
+    <Question
+      @model={{quest}}
+      @submit={{this.submitted}}
+      @callback={{this.testSubmitted}}
+    />
+  {{/each}}
+  <button
+    class='btn btn-primary btn-lg'
+    type='button'
+    {{on 'click' this.onSubmit}}
+  >
+    Submit
+  </button>
+</div>

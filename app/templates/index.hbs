@@ -1,0 +1,99 @@
+{{page-title 'Teachers Page'}}
+
+<div class='pattern-container'>
+  <h4 class='center-text'>Teachers Page</h4>
+  <div class='form-container'>
+
+    {{! input for number of questions }}
+    <div class='teacher-inputs'>
+      <label for='no-questions'>
+        No. of questions to be generated?
+      </label>
+      <input id='no-questions' />
+      <br />
+    </div>
+
+    {{! input for type of questions }}
+    <div class='teacher-inputs'>
+      <label>
+        Select the type of questions.
+      </label>
+      <div class='form-check'>
+        <input class='form-check-input' type='checkbox' value='+' id='add' />
+        <label class='form-check-label' for='add'>
+          Addition
+        </label>
+      </div>
+      <div class='form-check'>
+        <input class='form-check-input' type='checkbox' value='-' id='sub' />
+        <label class='form-check-label' for='sub'>
+          Subtraction
+        </label>
+      </div>
+      <div class='form-check'>
+        <input class='form-check-input' type='checkbox' value='*' id='mul' />
+        <label class='form-check-label' for='mul'>
+          Multiplication
+        </label>
+      </div>
+    </div>
+
+    {{! input to select difficulty }}
+    <div class='teacher-inputs'>
+      <div class='dif-selector'>
+        Select the difficulty of the questions
+        <div class='form-check'>
+          <input
+            checked
+            class='form-check-input'
+            type='radio'
+            value='0'
+            name='diff'
+            id='easy'
+          />
+          <label class='form-check-label' for='easy'>
+            Easy
+          </label>
+        </div>
+        <div class='form-check'>
+          <input
+            class='form-check-input'
+            type='radio'
+            value='1'
+            name='diff'
+            id='med'
+          />
+          <label class='form-check-label' for='med'>
+            Medium
+          </label>
+        </div>
+        <div class='form-check'>
+          <input
+            class='form-check-input'
+            type='radio'
+            value='2'
+            name='diff'
+            id='hard'
+          />
+          <label class='form-check-label' for='hard'>
+            Hard
+          </label>
+        </div>
+      </div>
+    </div>
+
+    {{#if this.isInValid}}
+      <div class='alert alert-danger' role='alert'>
+        {{this.errorMessage}}
+      </div>
+    {{/if}}
+    <div class='button-helper'>
+      <button
+        class='btn btn-secondary btn-lg'
+        type='button'
+        {{on 'click' this.onClickGenerate}}
+      >Generate</button>
+    </div>
+
+  </div>
+</div>

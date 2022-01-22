@@ -1,0 +1,11 @@
+<table class='quest-table'>
+  <tr>
+    <td id='quest-no'>{{@model.no}}. </td>
+    <td id='quest'>{{@model.que}} = </td>
+    <td><input
+        type='text'
+        class='student-response'
+        {{on-change @callback}}
+      /></td>
+  </tr>
+</table>
