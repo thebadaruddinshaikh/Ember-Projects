@@ -1,0 +1,32 @@
+<div class='music-container {{if this.isPlaying "play"}}' id='music-container'>
+  <div class='music-info'>
+    <h4 id='title'>{{@song}}</h4>
+    <div class='progress-container' id='progress-container'>
+      <div class='progress' id='progress'></div>
+    </div>
+  </div>
+
+  <audio
+    src='/music/{{@song}}.mp3'
+    id='audio'
+    {{song-change this.isPlaying this.updateTimeBar @next this.playSong}}
+  ></audio>
+
+  <div class='img-container'>
+    <img src='images/{{@song}}.jpeg' alt='music-cover' id='cover' />
+  </div>
+  <div class='navigation'>
+    <button id='prev' class='action-btn' type='button'>
+      <i class='fas fa-backward' {{on 'click' @prev}}></i>
+    </button>
+    <button id='play' class='action-btn action-btn-big' type='button'>
+      <i
+        class='fas {{if this.isPlaying "fa-pause" "fa-play"}}'
+        {{on 'click' this.playPause}}
+      ></i>
+    </button>
+    <button id='next' class='action-btn' type='button'>
+      <i class='fas fa-forward' {{on 'click' @next}}></i>
+    </button>
+  </div>
+</div>

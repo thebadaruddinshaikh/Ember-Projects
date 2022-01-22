@@ -1,0 +1,49 @@
+table {
+  margin: auto;
+}
+
+.table-body h4 {
+  text-align: center;
+}
+
+.box {
+  border: 1px solid white;
+  width: max-content;
+  height: 90px;
+  width: 75px;
+}
+
+.box p {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  padding: 30px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+* {
+  color: white;
+}
+
+.resetbtn {
+  align-items: center;
+  text-decoration: none;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+/*# sourceMappingURL=rsl-training2021-badaruddin-shaikh.css.map */
