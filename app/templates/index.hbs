@@ -1,0 +1,77 @@
+<div class='table-body'>
+  <table>
+    <tr>
+      <th><Box
+          @no='0'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='1'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='2'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+    </tr>
+    <tr>
+      <th><Box
+          @no='3'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='4'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='5'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+    </tr>
+    <tr>
+      <th><Box
+          @no='6'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='7'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+      <th><Box
+          @no='8'
+          @val={{this.curr}}
+          @onclick={{this.changeCurr}}
+          @isOver={{this.isWinner}}
+        /></th>
+    </tr>
+  </table>
+  {{#if this.isWinner}}
+    <h4>Winner is {{this.winner}}</h4>
+  {{else}}
+    {{#if this.isDraw}}
+      <h4>Draw!!</h4>
+    {{else}}
+      <h4>Now Playing : Player {{this.curr}}</h4>
+    {{/if}}
+  {{/if}}
+
+  <button class='resetbtn' {{on 'click' this.reloadPage}}>
+    Reset
+  </button>
+</div>
