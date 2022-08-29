@@ -1,2 +1,2 @@
 # Ember-Projects
-Mini Projects in Ember
+Each branch holds a Mini Project that was been built with Ember.js
